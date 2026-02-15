@@ -1,6 +1,6 @@
-/* ===================================
-   RESET BÁSICO
-=================================== */
+/* ============================= */
+/* RESET BÁSICO */
+/* ============================= */
 
 * {
   margin: 0;
@@ -8,61 +8,41 @@
   box-sizing: border-box;
 }
 
-/* ===================================
-   ESTILO GENERAL
-=================================== */
+/* ============================= */
+/* ESTILO GENERAL */
+/* ============================= */
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #ffffff;
-  line-height: 1.6;
-  position: relative;
+  line-height: 1.7;
+  min-height: 100vh;
 }
 
-/* Fondo animado */
-body::before {
-  content: "";
-  position: fixed;
-  width: 200%;
-  height: 200%;
-  background-image:
-    radial-gradient(circle, rgba(0,229,255,0.15) 2px, transparent 2px),
-    radial-gradient(circle, rgba(0,188,212,0.12) 3px, transparent 3px),
-    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 80px 80px, 120px 120px, 60px 60px;
-  animation: moverFondo 40s linear infinite;
-  z-index: -1;
-}
-
-@keyframes moverFondo {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-200px, -200px); }
-}
-
-/* ===================================
-   ENCABEZADO
-=================================== */
+/* ============================= */
+/* ENCABEZADO */
+/* ============================= */
 
 header {
   background: linear-gradient(90deg, #00bcd4, #007c91);
-  padding: 30px;
+  padding: 30px 20px;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
 }
 
 header h1 {
   font-size: 30px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 header p {
   font-size: 16px;
 }
 
-/* ===================================
-   MENÚ DE NAVEGACIÓN
-=================================== */
+/* ============================= */
+/* MENÚ DE NAVEGACIÓN */
+/* ============================= */
 
 nav {
   background: rgba(0, 0, 0, 0.9);
@@ -76,7 +56,8 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 15px;
+  font-size: 16px;
+  padding: 8px 14px;
   border-radius: 8px;
   transition: 0.3s;
 }
@@ -87,9 +68,9 @@ nav a:hover {
   box-shadow: 0 0 12px #00e5ff;
 }
 
-/* ===================================
-   CONTENIDO PRINCIPAL
-=================================== */
+/* ============================= */
+/* CONTENIDO PRINCIPAL */
+/* ============================= */
 
 main {
   max-width: 1000px;
@@ -97,81 +78,43 @@ main {
   padding: 20px;
 }
 
-/* Secciones tipo tarjeta */
+/* ============================= */
+/* SECCIONES */
+/* ============================= */
+
 section {
-  max-width: 900px;
-  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 30px auto;
   padding: 30px;
-  background: rgba(255,255,255,0.05);
   border-radius: 18px;
-  box-shadow: 0 0 18px rgba(0,229,255,0.25);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
   backdrop-filter: blur(6px);
+  max-width: 900px;
 }
 
-/* Títulos */
-h1, h2, h3 {
-  color: #00e5ff;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-/* Párrafos */
 section p {
   text-align: justify;
   margin-bottom: 15px;
-  font-size: 16px;
 }
 
-/* ===================================
-   MULTIMEDIA
-=================================== */
+/* ============================= */
+/* TÍTULOS */
+/* ============================= */
 
-.media {
+h1, h2, h3 {
   text-align: center;
-  margin-top: 25px;
+  color: #00e5ff;
+  margin-bottom: 15px;
 }
 
-.media img,
-.media video,
-.media iframe {
-  width: 420px;
-  max-width: 95%;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,229,255,0.4);
-  transition: 0.3s;
-}
-
-.media img:hover,
-.media video:hover,
-.media iframe:hover {
-  transform: scale(1.03);
-}
-
-/* Audio */
-audio {
-  display: block;
-  margin: 20px auto;
-  width: 420px;
-  max-width: 95%;
-}
-
-/* Contenedor para varios videos */
-.video-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 25px;
-}
-
-/* ===================================
-   BOTÓN DE MÚSICA
-=================================== */
+/* ============================= */
+/* BOTÓN MÚSICA */
+/* ============================= */
 
 .boton-musica {
   margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 15px;
+  padding: 10px 18px;
+  font-size: 16px;
   font-weight: bold;
   background: linear-gradient(90deg, #00e5ff, #00bcd4);
   border: none;
@@ -182,12 +125,65 @@ audio {
 
 .boton-musica:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px #00e5ff;
+  box-shadow: 0 0 12px #00e5ff;
 }
 
-/* ===================================
-   PIE DE PÁGINA
-=================================== */
+/* ============================= */
+/* CONTENEDOR DE VIDEOS */
+/* ============================= */
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+video {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0,229,255,0.5);
+  transition: 0.3s;
+}
+
+video:hover {
+  transform: scale(1.03);
+}
+
+/* ============================= */
+/* IMÁGENES */
+/* ============================= */
+
+img {
+  width: 650px;
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,229,255,0.4);
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* ============================= */
+/* AUDIO */
+/* ============================= */
+
+audio {
+  display: block;
+  margin: 20px auto;
+  width: 420px;
+  max-width: 100%;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
 
 footer {
   text-align: center;
@@ -196,4 +192,43 @@ footer {
   margin-top: 50px;
   font-size: 14px;
   color: #ccc;
+}
+
+/* ============================= */
+/* FONDO ANIMADO */
+/* ============================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background-image:
+    radial-gradient(circle, rgba(0,229,255,0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(0,188,212,0.12) 3px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+
+  background-size: 80px 80px, 120px 120px, 60px 60px;
+  animation: moverFondo 40s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moverFondo {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-200px, -200px); }
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
 }
