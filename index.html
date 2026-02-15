@@ -6,33 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laboratorio Digital de Química</title>
 
-  <!-- Estilos -->
   <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-  <!-- Música de fondo -->
-  <audio id="musicaFondo" loop autoplay>
+  <!-- Música de fondo (sin autoplay) -->
+  <audio id="musicaFondo" loop>
     <source
       src="https://dn721801.ca.archive.org/0/items/hollow-knight-soundtrack-plus-dlc/01%20Hollow%20Knight%20%28Title%20Theme%29.mp3"
       type="audio/mpeg">
   </audio>
-
-
 
   <!-- ENCABEZADO -->
   <header>
     <h1>🧪 Laboratorio Digital de Química y Luz</h1>
     <p>Presentación interactiva de fenómenos físicos y químicos</p>
 
-    <!-- BOTÓN PARA ACTIVAR MÚSICA -->
     <button onclick="activarMusica()" class="boton-musica">
       🔊 Activar música
     </button>
   </header>
 
-  <!-- MENÚ DE NAVEGACIÓN -->
+  <!-- MENÚ -->
   <nav>
     <a href="index.html">Inicio</a>
     <a href="tema1.html">Origen de la teoría cuántica</a>
@@ -42,74 +38,86 @@
     <a href="tema5.html">Espectros atómicos</a>
   </nav>
 
-  <!-- CONTENIDO PRINCIPAL -->
   <main class="menu-container">
 
     <section class="presentacion">
-  <h2>Bienvenido al Laboratorio Digital de Física Cuántica</h2>
+      <h2>Bienvenido al Laboratorio Digital de Física Cuántica</h2>
 
-  <p>
-    El presente sitio web fue desarrollado con la finalidad de explicar de manera clara,
-    visual e interactiva los fenómenos científicos que marcaron el nacimiento de la física moderna.
-    A finales del siglo XIX, diversos experimentos comenzaron a demostrar que las leyes
-    de la física clásica no eran suficientes para describir el comportamiento de la luz
-    y la materia a escala microscópica.
-  </p>
+      <p>
+        El presente sitio web fue desarrollado con la finalidad de explicar de manera clara,
+        visual e interactiva los fenómenos científicos que marcaron el nacimiento de la física moderna.
+        A finales del siglo XIX, diversos experimentos comenzaron a demostrar que las leyes
+        de la física clásica no eran suficientes para describir el comportamiento de la luz
+        y la materia a escala microscópica.
+      </p>
 
-  <p>
-    Este laboratorio digital reúne los principales descubrimientos que dieron origen
-    a la teoría cuántica, una de las revoluciones científicas más importantes de la historia.
-    A través de textos explicativos, imágenes, audios y videos, se presentan los conceptos
-    fundamentales que permitieron comprender que la energía no siempre se comporta de manera continua,
-    sino que puede manifestarse en cantidades discretas llamadas cuantos.
-  </p>
+      <p>
+        Este laboratorio digital reúne los principales descubrimientos que dieron origen
+        a la teoría cuántica, una de las revoluciones científicas más importantes de la historia.
+        A través de textos explicativos, imágenes, audios y videos, se presentan los conceptos
+        fundamentales que permitieron comprender que la energía no siempre se comporta de manera continua,
+        sino que puede manifestarse en cantidades discretas llamadas cuantos.
+      </p>
 
-  <p>
-    La página se compone de distintas secciones organizadas por temas:
-    la teoría ondulatoria de la luz, la radiación del cuerpo negro,
-    el efecto fotoeléctrico y los espectros atómicos. Cada apartado explica
-    el contexto histórico, el experimento realizado y su impacto en el desarrollo
-    de la ciencia y la tecnología moderna.
-  </p>
+      <p>
+        La página se compone de distintas secciones organizadas por temas:
+        la teoría ondulatoria de la luz, la radiación del cuerpo negro,
+        el efecto fotoeléctrico y los espectros atómicos. Cada apartado explica
+        el contexto histórico, el experimento realizado y su impacto en el desarrollo
+        de la ciencia y la tecnología moderna.
+      </p>
 
-  <p>
-    El objetivo principal de este proyecto es facilitar la comprensión de estos fenómenos
-    mediante un entorno digital atractivo, organizado y dinámico, demostrando que la ciencia
-    no solo se estudia en libros, sino que puede explorarse de manera interactiva.
-    Gracias a estos descubrimientos hoy existen tecnologías como los paneles solares,
-    los láseres, los semiconductores y los dispositivos electrónicos que utilizamos diariamente.
-  </p>
+      <p>
+        El objetivo principal de este proyecto es facilitar la comprensión de estos fenómenos
+        mediante un entorno digital atractivo, organizado y dinámico, demostrando que la ciencia
+        no solo se estudia en libros, sino que puede explorarse de manera interactiva.
+        Gracias a estos descubrimientos hoy existen tecnologías como los paneles solares,
+        los láseres, los semiconductores y los dispositivos electrónicos que utilizamos diariamente.
+      </p>
 
-  <p>
-    Este laboratorio digital representa una integración entre conocimiento científico
-    y herramientas tecnológicas, mostrando cómo la programación y la ciencia pueden
-    complementarse para crear experiencias educativas innovadoras.
-  </p>
+      <p>
+        Este laboratorio digital representa una integración entre conocimiento científico
+        y herramientas tecnológicas, mostrando cómo la programación y la ciencia pueden
+        complementarse para crear experiencias educativas innovadoras.
+      </p>
+    </section>
+
+    <!-- PANEL DE AUDIO -->
+    <section>
+      <h2>🎧 Explicación introductoria</h2>
+
+      <audio id="audioPanel" controls>
+        <source src="audio-intro.mp3" type="audio/mpeg">
+      </audio>
     </section>
 
   </main>
 
-  <!-- PIE DE PÁGINA -->
   <footer>
     <p>Proyecto educativo — Química</p>
   </footer>
 
-  <!-- SCRIPT PARA REPRODUCIR AUDIO -->
   <script>
+    const musicaFondo = document.getElementById("musicaFondo");
+    const audioPanel = document.getElementById("audioPanel");
+
     function activarMusica() {
-      const musica = document.getElementById("musicaFondo");
-
-      musica.volume = 0.5; // asegura volumen
-      musica.muted = false;
-
-      musica.play().then(() => {
-        console.log("Música reproduciéndose");
-      }).catch(error => {
+      musicaFondo.volume = 0.5;
+      musicaFondo.play().catch(error => {
         console.log("El navegador bloqueó el audio:", error);
       });
     }
+
+    // Cuando se reproduce el audio del panel
+    audioPanel.addEventListener("play", function () {
+      musicaFondo.pause();
+    });
+
+    // Cuando termina el audio
+    audioPanel.addEventListener("ended", function () {
+      musicaFondo.play();
+    });
   </script>
 
 </body>
-
 </html>
