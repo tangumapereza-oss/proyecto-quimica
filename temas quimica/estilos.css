@@ -1,0 +1,234 @@
+/* ===== ESTILO GENERAL ===== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===== ENCABEZADO ===== */
+header {
+  background: linear-gradient(90deg, #00bcd4, #007c91);
+  padding: 25px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+nav {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid #00e5ff;
+}
+
+/* LINKS DEL MENÚ SUPERIOR */
+nav a {
+  color: #ffffff;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* EFECTO HOVER */
+nav a:hover {
+  background: #00e5ff;
+  color: black;
+  box-shadow: 0 0 12px #00e5ff;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* TARJETAS DE INFORMACIÓN */
+section {
+  background: rgba(255, 255, 255, 0.06);
+  margin-bottom: 25px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+/* ===== BOTONES GRANDES DEL MENÚ PRINCIPAL ===== */
+.menu-botones {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.menu-botones a {
+  display: inline-block;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #ffffff;
+  padding: 14px 22px;
+  margin: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 0 12px rgba(0,229,255,0.6);
+  transition: all 0.3s ease;
+}
+
+/* HOVER BOTONES */
+.menu-botones a:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00e5ff, #00bcd4);
+  color: #000;
+}
+
+/* ===== TÍTULOS ===== */
+h1, h2, h3 {
+  color: #00e5ff;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ===== FONDO ANIMADO ===== */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    radial-gradient(circle, rgba(0,229,255,0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(0,188,212,0.12) 3px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    
+  background-size: 80px 80px, 120px 120px, 60px 60px;
+  animation: moverFondo 40s linear infinite;
+  z-index: -1;
+}
+
+/* Movimiento suave */
+@keyframes moverFondo {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-200px, -200px);
+  }
+}
+
+/* ===== CENTRAR CONTENIDO DE LOS TEMAS ===== */
+
+main {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Secciones centradas */
+section {
+  margin: 25px auto;
+  text-align: center;
+}
+
+/* Párrafos centrados y legibles */
+section p {
+  text-align: justify;
+  max-width: 750px;
+  margin: auto;
+}
+
+/* Títulos centrados */
+h1, h2, h3 {
+  text-align: center;
+}
+
+/*boton de la musica*/
+.boton-musica {
+  margin-top: 15px;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00e5ff, #00bcd4);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton-musica:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00e5ff;
+}
+
+/* ===== BLOQUE MULTIMEDIA ORDENADO ===== */
+
+.bloque-tema {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  box-shadow: 0 0 18px rgba(0,229,255,0.25);
+}
+
+/* CONTENEDOR GENERAL */
+.media {
+  margin: 25px auto;
+  text-align: center;
+}
+
+/* TEXTO */
+.texto {
+  text-align: justify;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+/* IMÁGENES */
+.media img {
+  width: 650px;
+  max-width: 90%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px rgba(0,229,255,0.4);
+}
+
+/* AUDIO */
+.media audio {
+  width: 420px;
+  max-width: 90%;
+  margin-top: 10px;
+}
+
+/* VIDEO */
+.media video {
+  width: 420px;
+  max-width: 90%;
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0 0 18px rgba(0,229,255,0.5);
+}
+
+/* IFRAME (videos de YouTube) */
+.media iframe {
+  width: 420px;
+  height: 240px;
+  max-width: 90%;
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0 0 18px rgba(0,229,255,0.5);
+}

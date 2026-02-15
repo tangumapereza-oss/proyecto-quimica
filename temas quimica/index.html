@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio Digital de Química</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+  <!-- Música de fondo -->
+  <audio id="musicaFondo" loop autoplay>
+    <source
+      src="https://dn721801.ca.archive.org/0/items/hollow-knight-soundtrack-plus-dlc/01%20Hollow%20Knight%20%28Title%20Theme%29.mp3"
+      type="audio/mpeg">
+  </audio>
+
+
+
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>🧪 Laboratorio Digital de Química y Luz</h1>
+    <p>Presentación interactiva de fenómenos físicos y químicos</p>
+
+    <!-- BOTÓN PARA ACTIVAR MÚSICA -->
+    <button onclick="activarMusica()" class="boton-musica">
+      🔊 Activar música
+    </button>
+  </header>
+
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="tema1.html">Origen de la teoría cuántica</a>
+    <a href="tema2.html">Teoría ondulatoria</a>
+    <a href="tema3.html">Cuerpo negro</a>
+    <a href="tema4.html">Efecto fotoeléctrico</a>
+    <a href="tema5.html">Espectros atómicos</a>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="menu-container">
+
+    <section class="presentacion">
+      <h2>Bienvenido</h2>
+      <p>
+        La luz y la materia no siempre se comportan como imaginamos. A finales del siglo XIX y principios del siglo XX,
+        diversos experimentos demostraron que las leyes clásicas de la física no eran suficientes para explicar ciertos
+        fenómenos naturales.
+      </p>
+
+      <p>
+        De esta crisis científica surgió la teoría cuántica, una de las revoluciones más importantes en la historia de
+        la ciencia.
+        Este laboratorio digital presenta de manera clara e interactiva los experimentos fundamentales que dieron origen
+        a esta nueva forma de entender la energía y la materia.
+      </p>
+
+      <p>
+        A través de explicaciones, imágenes y recursos multimedia, se analizan fenómenos como la radiación del cuerpo
+        negro,
+        la teoría ondulatoria de la luz, el efecto fotoeléctrico y los espectros atómicos, los cuales permitieron el
+        desarrollo
+        de tecnologías actuales como los paneles solares, los láseres y los dispositivos electrónicos.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Proyecto educativo — Química</p>
+  </footer>
+
+  <!-- SCRIPT PARA REPRODUCIR AUDIO -->
+  <script>
+    function activarMusica() {
+      const musica = document.getElementById("musicaFondo");
+
+      musica.volume = 0.5; // asegura volumen
+      musica.muted = false;
+
+      musica.play().then(() => {
+        console.log("Música reproduciéndose");
+      }).catch(error => {
+        console.log("El navegador bloqueó el audio:", error);
+      });
+    }
+  </script>
+
+</body>
+
+</html>
