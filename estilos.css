@@ -215,19 +215,10 @@ h1, h2, h3 {
 }
 
 /* VIDEO */
-.media video {
-  width: 420px;
-  max-width: 90%;
-  border-radius: 12px;
-  margin-top: 15px;
-  box-shadow: 0 0 18px rgba(0,229,255,0.5);
-}
-
-/* IFRAME (videos de YouTube) */
 .media iframe {
   width: 420px;
-  height: 240px;
   max-width: 90%;
+  height: 240px; /* importante porque iframe necesita altura */
   border-radius: 12px;
   margin-top: 15px;
   box-shadow: 0 0 18px rgba(0,229,255,0.5);
